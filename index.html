@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamPlus - Todo el Entretenimiento en un Solo Lugar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Hubble_ultra_deep_field.jpg/1200px-Hubble_ultra_deep_field.jpg') no-repeat center center/cover; /* Fondo de espacio */
+            background-size: cover;
+            overflow-x: hidden;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #333;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .header-logo {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .header-sublogo {
+            font-size: 1em;
+            color: #e50914;
+            margin-top: 10px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .hero {
+            background: rgba(0, 0, 0, 0.7) url('https://source.unsplash.com/1600x900/?entertainment') no-repeat center center/cover;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: slideIn 1s ease-in-out;
+        }
+        .hero p {
+            font-size: 1.5em;
+            animation: slideIn 1.5s ease-in-out;
+        }
+        .hero img {
+            margin-top: 20px;
+            max-width: 80%;
+            height: auto;
+            border: 2px solid #e50914;
+            border-radius: 10px;
+        }
+        .platforms {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .platform {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 250px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+        .platform:hover {
+            transform: scale(1.05);
+        }
+        .platform img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+            animation: pulse 1s infinite;
+        }
+        .platform h3 {
+            color: #fff;
+            margin: 10px 0;
+        }
+        .platform p {
+            color: #aaa;
+        }
+        .platform .price {
+            font-size: 1.5em;
+            color: #e50914;
+            margin-bottom: 10px;
+        }
+        .platform button {
+            background: #e50914;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background 0.3s ease-in-out;
+        }
+        .platform button:hover {
+            background: #f40612;
+        }
+        .product-info {
+            display: none;
+            text-align: center;
+            padding: 50px 0;
+            background: rgba(0, 0, 0, 0.8);
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .product-info h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-in-out;
+        }
+        .product-info p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+        .product-info .price {
+            font-size: 2em;
+            color: #e50914;
+            margin-bottom: 20px;
+        }
+        .product-info img {
+            width: 150px;
+            margin-bottom: 20px;
+            animation: pulse 1s infinite;
+        }
+        .product-info button {
+            background: #e50914;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background 0.3s ease-in-out;
+        }
+        .product-info button:hover {
+            background: #f40612;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-logo">StreamPlus</div>
+            <div class="header-sublogo">Tu portal de entretenimiento y más</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Bienvenido a StreamPlus</h1>
+            <p>Todo el entretenimiento que amas, ahora en un solo lugar</p>
+            <img src="https://www.dropbox.com/scl/fi/v6o817w80sna79lde6oqs/imagen.jpg?rlkey=oipg5oxr1oc01l1oc43ruh2ku&st=iq78xkb3&dl=1">
+        </div>
+    </section>
+
+    <section class="container platforms">
+        <div class="platform">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Netflix_logo.svg" alt="Netflix Logo">
+            <h3>Netflix</h3>
+            <p>Series y películas originales que no te puedes perder.</p>
+            <div class="price">S/6.5</div>
+            <button onclick="showProduct('Netflix', 6.5, 'https://upload.wikimedia.org/wikipedia/commons/6/69/Netflix_logo.svg', 'https://wa.link/4eupn8')">Comprar</button>
+        </div>
+        <div class="platform">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Disney%2B_2024.svg/220px-Disney%2B_2024.svg.png" alt="Disney+ Logo">
+            <h3>Disney+</h3>
+            <p>Accede a la magia de Disney, Pixar, Marvel y más.</p>
+            <div class="price">S/6.5</div>
+            <button onclick="showProduct('Disney+', 6.5, 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Disney%2B_2024.svg/220px-Disney%2B_2024.svg.png', 'https://wa.link/in2fnc')">Comprar</button>
+        </div>
+        <div class="platform">
+            <img src="https://elcomercio.pe/resizer/_rdeMGVoWmCGqlNN4bNeRhUTSpc=/1200x680/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/B6JFWYDYMBEP5KO374OEL3ANSI.png" alt="Doxeio Logo">
+            <h3>Doxeo</h3>
+            <p>Accede a cualquier información registrada en Perú.</p>
+            <div class="price">S/3</div>
+            <button onclick="showProduct('Doxeo', 3, 'https://elcomercio.pe/resizer/_rdeMGVoWmCGqlNN4bNeRhUTSpc=/1200x680/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/B6JFWYDYMBEP5KO374OEL3ANSI.png', 'https://wa.link/p2jyig')">Comprar</button>
+        </div>
+        <div class="platform">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Crunchyroll_2024_stacked.svg/1200px-Crunchyroll_2024_stacked.svg.png" alt="Crunchyroll Logo">
+            <h3>Crunchyroll</h3>
+            <p>La mejor selección de anime y manga.</p>
+            <div class="price">S/6.5</div>
+            <button onclick="showProduct('Crunchyroll', 6.5, 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Crunchyroll_2024_stacked.svg/1200px-Crunchyroll_2024_stacked.svg.png', 'https://wa.link/k5ahqp')">Comprar</button>
+        </div>
+        <div class="platform">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Logo_Am%C3%A9rica_Televisi%C3%B3n.png" alt="América TVGO Logo">
+            <h3>América TVGO</h3>
+            <p>Disfruta de una gran variedad de programas y series en vivo.</p>
+            <div class="price">S/10</div>
+            <button onclick="showProduct('América TVGO', 10, 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Logo_Am%C3%A9rica_Televisi%C3%B3n.png', 'https://wa.link/upjzsf')">Comprar</button>
+        </div>
+        <div class="platform">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Max_logo.svg/1200px-Max_logo.svg.png" alt="HBO Max Logo">
+            <h3>HBO Max</h3>
+            <p>Accede a los mejores contenidos de HBO y más.</p>
+            <div class="price">S/7</div>
+            <button onclick="showProduct('HBO Max', 7, 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Max_logo.svg/1200px-Max_logo.svg.png', 'https://wa.link/snonjp')">Comprar</button>
+        </div>
+        <div class="platform">
+            <img src="https://deadline.com/wp-content/uploads/2022/02/paramount-logo.jpg?crop=150px%2C111px%2C1729px%2C969px&resize=681%2C383" alt="Paramount Logo">
+            <h3>Paramount+</h3>
+            <p>Accede a una amplia gama de contenidos exclusivos.</p>
+            <div class="price">S/4</div>
+            <button onclick="showProduct('Paramount+', 4, 'https://deadline.com/wp-content/uploads/2022/02/paramount-logo.jpg?crop=150px%2C111px%2C1729px%2C969px&resize=681%2C383', 'https://wa.link/il3ra2')">Comprar</button>
+        </div>
+        <div class="platform">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/DGO-logo.png" alt="DirectvGO Logo">
+            <h3>DirectvGO</h3>
+            <p>Disfruta de televisión en vivo y contenido variado.</p>
+            <div class="price">S/24</div>
+            <button onclick="showProduct('DirectvGO', 24, 'https://upload.wikimedia.org/wikipedia/commons/5/50/DGO-logo.png', 'https://wa.link/1k4vc1')">Comprar</button>
+        </div>
+        <!-- Nuevos productos -->
+        <div class="platform">
+            <img src="https://media.tycsports.com/files/2022/06/14/440414/las-mejores-fotos-de-perfil-para-tu-cuenta-de-free-fire_w862.webp" alt="Free Fire Account Logo">
+            <h3>Cuenta de Free Fire</h3>
+            <p>Compra una cuenta premium de Free Fire con todos los recursos.</p>
+            <div class="price">S/0.00</div>
+            <button onclick="showProduct('Cuenta de Free Fire', 0.00, 'https://media.tycsports.com/files/2022/06/14/440414/las-mejores-fotos-de-perfil-para-tu-cuenta-de-free-fire_w862.webp', 'https://wa.link/1jpbxv')">Comprar</button>
+        </div>
+        <div class="platform">
+            <img src="https://e7.pngegg.com/pngimages/758/379/png-clipart-hacker-hacker.png">
+            <h3>Servicio de Hacking</h3>
+            <p>Obtén acceso a servicios exclusivos de hacking.</p>
+            <div class="price">S/0.00</div>
+            <button onclick="showProduct('Servicio de Hacking', 0.00, 'https://e7.pngegg.com/pngimages/758/379/png-clipart-hacker-hacker.png', 'https://wa.link/1jpbxv')">Comprar</button>
+        </div>
+    </section>
+
+    <div class="product-info" id="product-info">
+        <img id="product-image" src="" alt="">
+        <h1 id="product-name"></h1>
+        <p id="product-description"></p>
+        <div class="price" id="product-price"></div>
+        <button id="buy-button">Comprar</button>
+    </div>
+
+    <script>
+        function showProduct(name, price, image, link) {
+            document.getElementById('product-name').innerText = name;
+            document.getElementById('product-price').innerText = `S/${price}`;
+            document.getElementById('product-image').src = image;
+            document.getElementById('product-description').innerText = `¡Consigue el mejor contenido de ${name} ahora!`;
+            document.getElementById('buy-button').onclick = function() {
+                window.location.href = link;
+            };
+            document.querySelector('.product-info').style.display = 'block';
+
+            // Desplazamiento suave hacia la sección de información del producto
+            document.querySelector('#product-info').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
